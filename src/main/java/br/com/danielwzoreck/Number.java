@@ -2,9 +2,17 @@ package br.com.danielwzoreck;
 
 public class Number {
 
-	private int value;
+	/* Utilizando a classe Integer ao inves do tipo primitivo int
+	 * caso seja criado sem passar um valor no construtor o valor
+	 * sera nullo, com int por padrão é 0
+	*/
+	private Integer value;
 	
-	public Number(int value) {
+	public Number() {
+		
+	}
+	
+	public Number(Integer value) {
 		this.value = value;
 	}
 	
@@ -21,4 +29,13 @@ public class Number {
 			return true;
 		return false;
 	}
+
+	public Integer getValue() {
+		return value;
+	}
+
+	public void setValue(Integer value) {
+		this.value = value;
+	}
+	
 }
