@@ -1,5 +1,6 @@
 package br.com.danielwzoreck;
 
+import static org.junit.Assume.assumeTrue;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.concurrent.TimeUnit;
@@ -62,6 +63,10 @@ class NumberTest {
 	@Test
 	void nullNumberTest() {
 		Number n = new Number(null);
+		
+		// Espera um retorno True, caso contrário para a execuçao do teste!
+		assumeTrue(n.getValue() == null);
+		
 		// Espera-se retornar um null
 		assertNull(n.getValue());
 		// Testar excessões, quando chamado o método isEven() espera-se um NullPointerException
